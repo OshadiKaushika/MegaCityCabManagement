@@ -40,7 +40,7 @@ public class manageDrivers extends HttpServlet {
 
         try {
             Class.forName("com.mysql.cj.jdbc.Driver");
-            Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/MegaCityCab", "root", "");
+            Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/MegaCityCab", "root", "root");
             PreparedStatement stmt = conn.prepareStatement("INSERT INTO drivers(name, license_number, phone) VALUES (?,?,?)");
             stmt.setString(1, name);
             stmt.setString(2, licenseNumber);

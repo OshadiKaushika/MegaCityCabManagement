@@ -42,7 +42,7 @@ public class loginServlet extends HttpServlet {
             Class.forName("com.mysql.cj.jdbc.Driver");
             
             // Establish the connection to the database
-            try (Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/MegaCityCab", "root", "")) {
+            try (Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/MegaCityCab", "root", "root")) {
                 
                 // Prepare SQL query to check user credentials
                 String query = "SELECT * FROM users WHERE username = ? AND password = ?";

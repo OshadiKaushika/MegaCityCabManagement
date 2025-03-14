@@ -41,7 +41,7 @@ public class addBooking extends HttpServlet {
 
         try {
             Class.forName("com.mysql.cj.jdbc.Driver");
-            Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/MegaCityCab", "root", "");
+            Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/MegaCityCab", "root", "root");
             PreparedStatement stmt = conn.prepareStatement
         ("INSERT INTO bookings (customer_id, pickup_location, destination, fare) VALUES (?,?,?,?)");
             stmt.setInt(1, customerId);

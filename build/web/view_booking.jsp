@@ -52,7 +52,7 @@
             <%
                 try {
                     Class.forName("com.mysql.cj.jdbc.Driver");
-                    Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/MegaCityCab", "root", "");
+                    Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/MegaCityCab", "root", "root");
                     Statement stmt = conn.createStatement();
                     String query = "SELECT b.booking_id, c.name, b.pickup_location, b.destination, b.fare, b.booking_date " +
                                    "FROM bookings b INNER JOIN customers c ON b.customer_id = c.customer_id";

@@ -71,7 +71,7 @@
             <%
                 try {
                     Class.forName("com.mysql.cj.jdbc.Driver");
-                    Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/MegaCityCab", "root", "");
+                    Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/MegaCityCab", "root", "root");
                     Statement stmt = conn.createStatement();
                     String query = "SELECT * FROM drivers";
                     ResultSet rs = stmt.executeQuery(query);

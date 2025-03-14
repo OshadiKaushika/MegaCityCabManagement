@@ -40,7 +40,7 @@ public class manageCars extends HttpServlet {
 
         try {
             Class.forName("com.mysql.cj.jdbc.Driver");
-            Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/MegaCityCab", "root", "");
+            Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/MegaCityCab", "root", "root");
             PreparedStatement stmt = conn.prepareStatement("INSERT INTO cars (model, plate_number, driver_id) VALUES (?,?,?)");
             stmt.setString(1, model);
             stmt.setString(2, plateNumber);

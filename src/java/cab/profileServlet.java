@@ -46,7 +46,7 @@ public class profileServlet extends HttpServlet {
         try {
             // Database connection
             Class.forName("com.mysql.cj.jdbc.Driver");
-            try (Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/MegaCityCab", "root", "")) {
+            try (Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/MegaCityCab", "root", "root")) {
                 // SQL query to get customer details based on the username
                 String query = "SELECT * FROM users WHERE user_id = ?";
                 PreparedStatement stmt = conn.prepareStatement(query);

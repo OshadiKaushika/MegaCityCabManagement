@@ -70,7 +70,7 @@
         if (bookingId != null) {
             try {
                 Class.forName("com.mysql.cj.jdbc.Driver");
-                Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/MegaCityCab", "root", "");
+                Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/MegaCityCab", "root", "root");
                 PreparedStatement stmt = conn.prepareStatement
 ("SELECT b.booking_id, c.name, c.phone, b.pickup_location, b.destination, b.fare FROM bookings b INNER JOIN customers c ON b.customer_id = c.customer_id "
 + "WHERE b.booking_id = ?");
